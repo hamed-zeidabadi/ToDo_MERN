@@ -1,7 +1,10 @@
 {
   "name": "ToDo",
   "version": "1",
-  "main": "index.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
   "repository": "https://github.com/hamed-zeidabadi/ToDo_MERN.git",
   "author": "hamed-zeidabadi <zeidabadi73@gmail.com>",
   "license": "MIT",
