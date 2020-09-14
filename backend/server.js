@@ -13,8 +13,6 @@ require("dotenv").config();
 const connectDB = require("./db").connectDB;
 connectDB();
 
-connectDB();
-
 // Running Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server is Running On ${PORT}`));
