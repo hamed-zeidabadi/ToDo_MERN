@@ -1,15 +1,5 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
-
-const Todo_Schema = Schema({
-  username: {
-    type: String,
-    required: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
+const Todo_Schema = mongoose.Schema({
   todo: {
     type: String,
     required: true,

@@ -14,8 +14,8 @@ const connectDB = require("./db").connectDB;
 connectDB();
 
 //Routers
-const User = require("./Routes/User.Router");
-app.use("/api", User);
+const User_Route = require("./Routes/User.Router");
+app.use("/api", User_Route);
 
 // Running Server
 const PORT = process.env.PORT || 5000;
