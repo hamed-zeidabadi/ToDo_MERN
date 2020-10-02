@@ -16,9 +16,7 @@ connectDB();
 //Routers
 const User_Route = require("./Routes/User.Router.js");
 app.use("/api", User_Route);
-app.get("/", (req, res) => {
-  res.status(200).send("ok");
-});
+
 
 // Running Server
 const PORT = process.env.PORT || 5000;
