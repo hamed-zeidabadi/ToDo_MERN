@@ -5,6 +5,7 @@ exports.register = async (req, res, next) => {
   try {
     //get requsest data
     const { username, password } = await req.body;
+
     // data Validation
     const Schema = Joi.object({
       username: Joi.string().min(4).max(255).required(),
@@ -19,6 +20,7 @@ exports.register = async (req, res, next) => {
     // hash password
     const salt = await bcrypt.genSalt(10);
     const hashPaswword = await bcrypt.hash(password, salt);
+
     //craete new user
     const createUser = await new User({
       username,
@@ -28,6 +30,14 @@ exports.register = async (req, res, next) => {
     res.status(200).send("ok");
     next();
   } catch (error) {
-    // console.log(error);
+    console.log(error);
+  }
+};
+
+exports.login = async (req, res, next) => {
+  try {
+    res.send("login user");
+  } catch (error) {
+    console.log(error);
   }
 };
