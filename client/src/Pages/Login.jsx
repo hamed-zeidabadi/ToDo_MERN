@@ -3,6 +3,7 @@ import "font-awesome/scss/font-awesome.scss";
 import "./../Scss/Login.scss";
 import SinIn from "./../Components/SinIn";
 import SinUp from "../Components/SinUp";
+import { AnimateOnChange } from "react-animation";
 
 const Login = () => {
   const [state, setstate] = React.useState(true);
@@ -36,7 +37,13 @@ const Login = () => {
             </label>
           </div>
 
-          {state ? <SinIn /> : <SinUp />}
+          <AnimateOnChange
+            animationIn="bounceIn"
+            animationOut="bounceOut"
+            durationOut={500}
+          >
+            {state ? <SinIn /> : <SinUp />}
+          </AnimateOnChange>
         </form>
       </div>
     </>
