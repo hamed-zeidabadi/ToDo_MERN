@@ -4,7 +4,7 @@ const Login = () => {
 
 <>
 
-<div> ok </div>
+<div> <h1> ok </h1> </div>
 
 
 </>
