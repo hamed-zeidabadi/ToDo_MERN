@@ -10,7 +10,7 @@ const Login = () => {
   return (
     <>
       <div className="testbox">
-        <h1>ثبت نام</h1>
+        <h1>دفترچه یادداشت</h1>
         <form>
           <div className="accounttype">
             <input
