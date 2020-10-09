@@ -1,7 +1,11 @@
 import React from "react";
+import "font-awesome/scss/font-awesome.scss";
 import "./../Scss/Login.scss";
+import SinIn from "./../Components/SinIn";
+import SinUp from "../Components/SinUp";
 
 const Login = () => {
+  const [state, setstate] = React.useState(true);
   return (
     <>
       <div className="testbox">
@@ -13,63 +17,26 @@ const Login = () => {
               value="None"
               id="radioOne"
               name="account"
-              checked
+              checked={!state ? false : true}
+              onClick={() => setstate(true)}
             />
             <label for="radioOne" className="radio" chec>
-           ثبت نام
+              ثبت نام
             </label>
-            <input type="radio" value="None" id="radioTwo" name="account" />
-            <label for="radioTwo" className="radio">
+            <input
+              type="radio"
+              value="None"
+              id="radioTwo"
+              name="account"
+              checked={state ? false : true}
+              onClick={() => setstate(false)}
+            />
+            <label id="radio2" for="radioTwo" className="radio">
               ورود کاربر
             </label>
           </div>
-          <label id="icon" for="name">
-            <i className="icon-envelope " />
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Email"
-            required
-          />
-          <label id="icon" for="name">
-            <i className="icon-user"></i>
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name"
-            required
-          />
-          <label id="icon" for="name">
-            <i className="icon-shield"></i>
-          </label>
-          <input
-            type="password"
-            name="name"
-            id="name"
-            placeholder="Password"
-            required
-          />
-          <div className="gender">
-            <input type="radio" value="None" id="male" name="gender" checked />
-            <label for="male" className="radio" chec>
-              Male
-            </label>
-            <input type="radio" value="None" id="female" name="gender" />
-            <label for="female" className="radio">
-              Female
-            </label>
-          </div>
-          <p>
-            By clicking Register, you agree on our{" "}
-            <a href="#">terms and condition</a>.
-          </p>
-          <a href="#" className="button">
-            Register
-          </a>
+
+          {state ? <SinIn /> : <SinUp />}
         </form>
       </div>
     </>
