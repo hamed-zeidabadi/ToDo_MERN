@@ -1,10 +1,11 @@
 import React from "react";
 import "./Scss/App.scss";
+import Login from "./Pages/Login";
 
 const App = () => {
   return (
     <>
-      <h1>ok</h1>
+      <Login />
     </>
   );
 };
