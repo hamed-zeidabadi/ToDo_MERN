@@ -16,7 +16,7 @@ const App = () => {
         <Switch>
           {/* <Route path="/" component={Login} /> */}
           <Route path="/" component={Todo} />
-          <Redirect path="/" />
+          <Redirect path="/" to={Todo} />
         </Switch>
       </Router>
     </>
