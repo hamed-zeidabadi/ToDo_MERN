@@ -10,12 +10,13 @@ import {
 } from "react-router-dom";
 
 const App = () => {
+  const [isLogin, setisLogin] = React.useState(false);
+
   return (
     <>
       <Router>
         <Switch>
-          {/* <Route path="/" component={Login} /> */}
-          <Route path="/" component={Todo} />
+          <Route path="/" exact component={Todo} />
           <Redirect path="/" to={Todo} />
         </Switch>
       </Router>
